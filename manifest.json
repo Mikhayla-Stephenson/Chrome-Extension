@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+	"name": "productivity",
+	"version": "0.1",
+	"background": {
+		"scripts": [ "./Popup/backgroundTimer.js" ]
+	},
+
+	"browser_action": {
+		"default_icon": "tab-icon.png",
+		"default_title": "Get back to work!",
+		"default_popup": "./Popup/popup.html"
+	},
+	"chrome_url_overrides": { "newtab": "./newTab/newtab.html" },
+	"permissions": [ "activeTab", "storage" ]
+}
