@@ -1,8 +1,6 @@
 // ** Timer Countdown
 
 //TODO: Implement side arrow functionality
-//TODO: Implement stop button
-//TODO: Consider refactoring background scripts
 
 //Grab elements the timer will be using
 let circle = document.getElementById('circle');
@@ -14,7 +12,9 @@ let hrsMinus = document.getElementById('down');
 let hours = 0;
 let minutes = 0;
 let seconds = 0;
-let myTimer = false;
+
+let myTimer = null;
+let stop = false;
 btn.innerHTML = 'start';
 
 // Add or remove minutes to the timer
@@ -54,32 +54,25 @@ hrsMinus.addEventListener('click', function() {
 	circle.innerHTML = '<h2 id ="clock" style="color:white">' + hours + 'h &puncsp;' + minutes + 'm' + '</h2>';
 });
 
-/**
- * Start timer -
- * Sends message to listener in background script
- * background script will run the timer and return
- * values to be displayed
- */
+// start/stop timer
+// sends message with relevant values to background timer scripts
+
 btn.addEventListener('click', function() {
-	if (!myTimer) {
+	if (!stop) {
 		chrome.runtime.sendMessage({
-			timer: true,
+			timerStart: true,
 			minutes: minutes,
 			hours: hours,
-			seconds: seconds,
-			status: true,
-			timerId: myTimer
+			seconds: seconds
 		});
 	} else {
 		btn.innerHTML = 'start';
-		btn.id = 'start';
-		myTimer = false;
+		stop = false;
+		seconds = 0;
+		minutes = 0;
+		hours = 0;
 		chrome.runtime.sendMessage({
-			timer: true,
-			minutes: minutes,
-			hours: hours,
-			seconds: seconds,
-			status: false,
+			timerStop: true,
 			timerId: myTimer
 		});
 	}
@@ -89,8 +82,9 @@ btn.addEventListener('click', function() {
 chrome.runtime.onMessage.addListener(function(message, sender) {
 	if (!message.background) return;
 	myTimer = message.timerId;
+	stop = true;
+	console.log(myTimer);
 	btn.innerHTML = 'stop';
-	btn.id = 'stop';
 	if ((message.minutes > 0 || message.seconds > 0) && message.hours === 0) {
 		circle.innerHTML = '<h2 id="clock" style="color:white">' + message.minutes + 'm ' + message.seconds + 's </h2>';
 	} else {

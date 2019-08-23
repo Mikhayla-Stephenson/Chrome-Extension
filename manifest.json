@@ -3,7 +3,7 @@
 	"name": "productivity",
 	"version": "0.1",
 	"background": {
-		"scripts": [ "./Popup/backgroundTimer.js" ]
+		"scripts": [ "./Popup/runTimer.js", "./Popup/stopTimer.js" ]
 	},
 
 	"browser_action": {
