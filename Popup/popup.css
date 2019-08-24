@@ -34,7 +34,7 @@
 
 	text-align: center;
 }
-#butt {
+#btn {
 	display: block;
 	height: 25px;
 	width: 50px;
@@ -44,7 +44,7 @@
 	border-radius: 25%;
 	-webkit-user-select: none;
 }
-butt:focus {
+#btn:focus {
 	outline: 0;
 }
 

@@ -13,7 +13,6 @@ for (let i = 0; i < 12; i++) {
 	child.style.top = height + '%';
 	child.style.marginLeft = height + '%';
 	child.style.marginRight = height + '%';
-
 	percent -= 5;
 	height += 2.5;
 	child.style.position = 'absolute';

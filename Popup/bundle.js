@@ -2,7 +2,7 @@
 //? Is there a way to call webpacker once and use it in both newTab and Popup instances?
 
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-var ProgressBar = require('progressbar.js');
+var ProgressBar = require('./node_modules/progressbar.js.js');
 
 
 
@@ -117,7 +117,7 @@ module.exports = {
 },{"./circle":2,"./line":3,"./path":5,"./semicircle":6,"./shape":7,"./utils":8}],5:[function(require,module,exports){
 // Lower level API to animate any kind of svg path
 
-var Tweenable = require('shifty');
+var Tweenable = require('./node_modules/shifty');
 var utils = require('./utils');
 
 var EASING_ALIASES = {

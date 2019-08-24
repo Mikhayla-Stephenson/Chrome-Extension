@@ -4,7 +4,7 @@
 
 //Grab elements the timer will be using
 let circle = document.getElementById('circle');
-let btn = document.getElementById('butt');
+let btn = document.getElementById('btn');
 let hrsPlus = document.getElementById('up');
 let hrsMinus = document.getElementById('down');
 
