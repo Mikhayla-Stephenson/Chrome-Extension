@@ -75,6 +75,7 @@ btn.addEventListener('click', function() {
 			timerStop: true,
 			timerId: myTimer
 		});
+		circle.innerHTML = '<h2 id ="clock" style="color:white">' + hours + 'h &puncsp; ' + minutes + 'm' + '</h2>';
 	}
 });
 

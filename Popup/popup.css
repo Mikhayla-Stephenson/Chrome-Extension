@@ -42,15 +42,10 @@
 	margin-bottom: 0px;
 	border: none;
 	border-radius: 25%;
+	-webkit-user-select: none;
 }
-#stop {
-	display: block;
-	height: 25px;
-	width: 50px;
-	margin: 20px auto;
-	margin-bottom: 0px;
-	border: none;
-	border-radius: 25%;
+butt:focus {
+	outline: 0;
 }
 
 #clock {

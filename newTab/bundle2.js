@@ -10,7 +10,7 @@
         let ring = new ProgressBar.Circle(container, {
           strokeWidth: 1,
           easing: 'easeInOut',
-          duration: 7000 - (i*450),
+          duration: 9000 - (i*450),
           color: rainbow[i],
          
           svgStyle: null
