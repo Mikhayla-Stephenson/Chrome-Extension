@@ -7,6 +7,4 @@ A small a chrome extension that is currently in the works. The basic aim is to c
 Chrome extensions will block external libraries so setup is easy. Simply create a local copy of the repository and load it as an extension [here](chrome://extensions/)
 
 
-## Contributing
 
-This is a personal project made to learn vanilla js so contribution is not open for this project. That being said, any tips for working with web-packers would be a life saver. 
