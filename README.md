@@ -4,7 +4,7 @@ A small a chrome extension that is currently in the works. The basic aim is to c
 
 ## Usage
 
-Chrome extensions will block external libraries so setup is easy. Simply create a local copy of the repository and load it as an extension [here](chrome://extensions/)
+Chrome extensions will block external libraries so setup is easy. Simply create a local copy of the repository and load it as an extension in chrome://extensions
 
 
 
